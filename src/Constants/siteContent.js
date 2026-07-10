@@ -344,9 +344,9 @@ export const SITE_CONTENT = {
     subtitle: { en: "We are ready to support you", am: "ለመርዳት ሁልጊዜ ዝግጁ ነን" },
     branchesTitle: { en: "Our Branch Addresses", am: "የቅርንጫፍ አድራሻዎች" },
     details: [
-      { label: { en: "Phone", am: "ስልክ" }, value: "+251 900 000 000" },
-      { label: { en: "Email", am: "ኢሜይል" }, value: "hello@albash.com" },
-      { label: { en: "Address", am: "አድራሻ" }, value: "Addis Ababa, Ethiopia" },
+      { label: { en: "Phone", am: "ስልክ" }, value: {en:"+251 900 000 000",am:"+251 900 000 000" }},
+      { label: { en: "Email", am: "ኢሜይል" }, value: {en:"hello@albash.com",am:"hello@albash.com"} },
+      { label: { en: "Address", am: "አድራሻ" }, value: {en:"Addis Ababa, Ethiopia",am:"አዲስ አበባ, ኢትዮጵያ"} },
       {
         label: { en: "Working Hours", am: "የስራ ሰዓት" },
         value: { en: "Mon - Sat, 8:00 AM - 8:00 PM", am: "ሰኞ - ቅዳሜ፣ 8:00 ጥዋት - 8:00 ማታ" },
