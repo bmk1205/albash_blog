@@ -19,7 +19,7 @@ export const Service = () => {
       <div className="row g-4">
         {SITE_CONTENT.services.map((service) => (
           <div className="col-sm-12 col-md-6 col-lg-4" key={service.title.en}>
-            <div className="card h-100 shadow-sm border-0">
+            <div className="card h-100 shadow-sm border-0 dtext">
               <div className="card-body">
                 <h5 className="card-title">{t(service.title)}</h5>
                 <p className="card-text text-secondary">{t(service.description)}</p>

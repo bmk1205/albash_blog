@@ -17,7 +17,7 @@ export const Shop = () => {
       <div className="row g-4">
         {SITE_CONTENT.shopProducts.map((product) => (
           <div className="col-12 col-sm-6 col-lg-4" key={product.name.en}>
-            <div className="card h-100 shadow-sm border-0 shop-card">
+            <div className="card h-100 shadow-sm border-0 shop-card dtext">
               <img
                 src={imageByKey[product.image] || laundry}
                 alt={t(product.name)}
@@ -25,7 +25,7 @@ export const Shop = () => {
               />
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title mb-2">{t(product.name)}</h5>
-                <p className="card-text text-secondary mb-3">{t(product.description)}</p>
+                <p className="card-text  mb-3">{t(product.description)}</p>
                 <div className="mt-auto shop-price-tag">
                   {t(SITE_CONTENT.shopPage.priceLabel)}:{" "}
                   <strong>

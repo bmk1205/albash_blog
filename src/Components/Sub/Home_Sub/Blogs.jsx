@@ -33,7 +33,7 @@ export const Blogs = () => {
             <div className="row g-4">
               {slide.map((blog) => (
                 <div className="col-md-6" key={blog.title.en}>
-                  <div className="card h-100 shadow-sm border-0 blog-card">
+                  <div className="card h-100 shadow-sm border-0 blog-card dtext">
                     <img
                       src={imageByKey[blog.image] || laundry}
                       className="card-img-top blog-card-image"
@@ -41,8 +41,8 @@ export const Blogs = () => {
                     />
                     <div className="card-body">
                       <h5 className="card-title">{t(blog.title)}</h5>
-                      <p className="card-text text-secondary">{t(blog.summary)}</p>
-                      <small className="text-muted">{blog.date}</small>
+                      <p className="card-text ">{t(blog.summary)}</p>
+                      <small className="text-center">{blog.date}</small>
                     </div>
                   </div>
                 </div>

@@ -7,16 +7,16 @@ export const Contact = () => {
 
   return (
     <section className="container py-5">
-      <div className="card shadow-sm border-0">
+      <div className="card shadow-sm border-0 dtext">
         <div className="card-body p-4 p-md-5">
           <h1 className="fw-bold mb-2">{t(contact.title)}</h1>
-          <p className="text-secondary mb-4">{t(contact.subtitle)}</p>
+          <p className="mb-4">{t(contact.subtitle)}</p>
           <div className="row g-3">
             {contact.details.map((item) => (
               <div className="col-12 col-md-6" key={item.label.en || item.label}>
-                <div className="p-3 bg-light rounded h-100">
+                <div className="p-3  rounded h-100">
                   <h6 className="mb-1">{t(item.label)}</h6>
-                  <p className="mb-0 text-secondary">{t(item.value)}</p>
+                  <p className="mb-0">{t(item.value)}</p>
                 </div>
               </div>
             ))}
@@ -27,17 +27,17 @@ export const Contact = () => {
             <div className="row g-3">
               {contact.branches.map((branch) => (
                 <div className="col-12 col-lg-6" key={branch.type.en}>
-                  <div className="p-3 bg-light rounded h-100">
+                  <div className="p-3  rounded h-100">
                     <h5 className="mb-2">{t(branch.type)}</h5>
-                    <p className="mb-2 text-secondary">
+                    <p className="mb-2 ">
                       <strong>{t({ en: "Address", am: "አድራሻ" })}: </strong>
                       {t(branch.address)}
                     </p>
-                    <p className="mb-2 text-secondary">
+                    <p className="mb-2 ">
                       <strong>{t({ en: "Phone", am: "ስልክ" })}: </strong>
                       {branch.phone}
                     </p>
-                    <p className="mb-0 text-secondary">
+                    <p className="mb-0 ">
                       <strong>{t({ en: "Email", am: "ኢሜይል" })}: </strong>
                       {branch.email}
                     </p>

@@ -17,7 +17,7 @@ const Home_Slider = () => {
         <div className="container">
           <div className="row align-items-center g-4">
             <div className="col-lg-6">
-              <h1 className="display-5 fw-bold">{t(home.welcomeTitle)}</h1>
+              <h1 className="display-4 fw-bold">{t(home.welcomeTitle)}</h1>
               <p className="fs-4 text-info mb-4 hero-typing">
                 <Typewriter
                   words={home.typewriterWords.map((item) => t(item))}
@@ -29,7 +29,7 @@ const Home_Slider = () => {
                   delaySpeed={1500}
                 />
               </p>
-              <ul className="list-group list-group-flush rounded overflow-hidden shadow-sm">
+              {/* <ul className="list-group list-group-flush rounded overflow-hidden shadow-sm">
                 {home.highlights.map((item) => (
                   <li
                     key={item.en}
@@ -38,7 +38,7 @@ const Home_Slider = () => {
                     {t(item)}
                   </li>
                 ))}
-              </ul>
+              </ul> */}
               <p className="h4 mt-4 mb-0">{t(home.homeServiceText)}</p>
             </div>
             <div className="col-lg-6 text-center">
