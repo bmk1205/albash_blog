@@ -51,7 +51,6 @@
   background: var(--footer-bg);
   border-top: 1px solid rgba(148, 163, 184, 0.25);
 }
-
 .social-link {
   width: 36px;
   height: 36px;
@@ -137,7 +136,14 @@
   height: 320px;
   object-fit: cover;
 }
-
+.icon{
+  width: 50px;
+  height: 50px;
+}
+.icon2{
+  width: 30px;
+  height: 30px;
+}
 .header-nav-link.active {
   border-bottom: 2px solid currentColor;
 }

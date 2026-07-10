@@ -4,7 +4,9 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/Images/logo.jpg";
 import { SITE_CONTENT } from "../../../Constants/siteContent";
 import { useAppPreferences } from "../../../context/AppPreferences";
-
+import { MdLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
+// import { MdOutlineLanguage } from "react-icons/md";
 const Home_Header = () => {
   const { theme, language, toggleTheme, setLanguage, t } = useAppPreferences();
 
@@ -21,9 +23,7 @@ const Home_Header = () => {
             <img
               src={logo}
               alt="Albash Logo"
-              width="50"
-              height="50"
-              className="img-fluid mx-1 rounded"
+              className="img-fluid mx-1 rounded icon"
             />
             {t(SITE_CONTENT.brand.name)}
           </Navbar.Brand>
@@ -45,13 +45,13 @@ const Home_Header = () => {
             <div className="d-flex flex-column flex-lg-row align-items-lg-center gap-2 py-2 py-lg-0">
               <button
                 type="button"
-                className="btn btn-outline-secondary btn-sm"
+                className="btn  btn-sm"
                 onClick={toggleTheme}
               >
-                {t(SITE_CONTENT.controls.theme)}:{" "}
+                {/* {t(SITE_CONTENT.controls.theme)}:{" "} */}
                 {theme === "dark"
-                  ? t(SITE_CONTENT.controls.dark)
-                  : t(SITE_CONTENT.controls.light)}
+                  ? <MdDarkMode className="icon2"/>
+                  : <MdLightMode className="icon2"/>}
               </button>
               <select
                 className="form-select form-select-sm"
