@@ -30,15 +30,15 @@ export const Contact = () => {
                   <div className="p-3  rounded h-100">
                     <h5 className="mb-2">{t(branch.type)}</h5>
                     <p className="mb-2 ">
-                      <strong>{t({ en: "Address", am: "አድራሻ" })}: </strong>
+                      <strong>{t(SITE_CONTENT.common.address)}: </strong>
                       {t(branch.address)}
                     </p>
                     <p className="mb-2 ">
-                      <strong>{t({ en: "Phone", am: "ስልክ" })}: </strong>
+                      <strong>{t(SITE_CONTENT.common.phone)}: </strong>
                       {branch.phone}
                     </p>
                     <p className="mb-0 ">
-                      <strong>{t({ en: "Email", am: "ኢሜይል" })}: </strong>
+                      <strong>{t(SITE_CONTENT.common.email)}: </strong>
                       {branch.email}
                     </p>
                     <div className="map-wrapper rounded overflow-hidden border mt-3">

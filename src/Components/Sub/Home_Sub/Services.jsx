@@ -7,13 +7,8 @@ export const Service = () => {
   return (
     <section className="container py-5">
       <div className="mb-4">
-        <h1 className="fw-bold">{t({ en: "Services", am: "አገልግሎቶች" })}</h1>
-        <p className="text-secondary mb-0">
-          {t({
-            en: "Flexible service options designed for speed and quality.",
-            am: "ለፍጥነት እና ጥራት የተዘጋጁ ተለዋዋጭ አገልግሎቶች።",
-          })}
-        </p>
+        <h1 className="fw-bold">{t(SITE_CONTENT.servicesPage.title)}</h1>
+        <p className="text-secondary mb-0">{t(SITE_CONTENT.servicesPage.subtitle)}</p>
       </div>
 
       <div className="row g-4">

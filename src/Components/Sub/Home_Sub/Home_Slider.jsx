@@ -44,7 +44,7 @@ const Home_Slider = () => {
             <div className="col-lg-6 text-center">
               <img
                 src={image1}
-                alt="Laundry service"
+                alt={t(SITE_CONTENT.images.laundryServiceAlt)}
                 className="img-fluid rounded shadow laundary_home_image"
               />
             </div>

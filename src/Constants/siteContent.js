@@ -1,6 +1,14 @@
 export const SITE_CONTENT = {
+  common: {
+    address: { en: "Address", am: "አድራሻ" },
+    phone: { en: "Phone", am: "ስልክ" },
+    email: { en: "Email", am: "ኢሜይል" },
+    backHome: { en: "Back Home", am: "ወደ መነሻ ተመለስ" },
+    showMore: { en: "Show More", am: "ተጨማሪ አሳይ" },
+  },
   brand: {
     name: { en: "Albash", am: "አልባሽ" },
+    logoAlt: { en: "Albash Logo", am: "የአልባሽ ምልክት" },
     tagline: {
       en: "Ethiopian garment manufacturing and professional fabric care",
       am: "የኢትዮጵያ የጋርመንት ምርት እና ሙያዊ የጨርቅ እንክብካቤ",
@@ -22,6 +30,34 @@ export const SITE_CONTENT = {
     dark: { en: "Dark", am: "ጨለማ" },
     english: { en: "English", am: "እንግሊዝኛ" },
     amharic: { en: "Amharic", am: "አማርኛ" },
+    oromo: { en: "Oromo", am: "ኦሮምኛ" },
+    toggleTheme: { en: "Toggle theme", am: "ገጽታ ቀይር" },
+    toggleLanguage: { en: "Change language", am: "ቋንቋ ቀይር" },
+  },
+  languages: {
+    en: { en: "English", am: "እንግሊዝኛ" },
+    am: { en: "Amharic", am: "አማርኛ" },
+    om: { en: "Oromo", am: "ኦሮምኛ" },
+  },
+  images: {
+    laundryServiceAlt: { en: "Laundry service", am: "የልብስ ማጠቢያ አገልግሎት" },
+  },
+  errors: {
+    notFound: {
+      title: { en: "404 - Page Not Found", am: "404 - ገጹ አልተገኘም" ,om:"afan oromo"},
+      description: {
+        en: "The page you are looking for does not exist.",
+        am: "የሚፈልጉት ገጽ የለም።",
+        om:"afan oromo"
+      },
+    },
+  },
+  servicesPage: {
+    title: { en: "Services", am: "አገልግሎቶች" },
+    subtitle: {
+      en: "Flexible service options designed for speed and quality.",
+      am: "ለፍጥነት እና ጥራት የተዘጋጁ ተለዋዋጭ አገልግሎቶች።",
+    },
   },
   socialLinks: {
     title: { en: "Follow Us", am: "ይከተሉን" },

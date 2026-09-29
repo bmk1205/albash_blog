@@ -6,9 +6,17 @@ import { SITE_CONTENT } from "../../../Constants/siteContent";
 import { useAppPreferences } from "../../../context/AppPreferences";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
-// import { MdOutlineLanguage } from "react-icons/md";
+import { MdOutlineLanguage } from "react-icons/md";
 const Home_Header = () => {
   const { theme, language, toggleTheme, setLanguage, t } = useAppPreferences();
+
+  const toggleLanguage = () => {
+    setLanguage((prevLanguage) => {
+      if (prevLanguage === "en") return "am";
+      if (prevLanguage === "am") return "om";
+      return "en";
+    });
+  };
 
   return (
     <>
@@ -22,7 +30,7 @@ const Home_Header = () => {
           <Navbar.Brand as={Link} to="/">
             <img
               src={logo}
-              alt="Albash Logo"
+              alt={t(SITE_CONTENT.brand.logoAlt)}
               className="img-fluid mx-1 rounded icon"
             />
             {t(SITE_CONTENT.brand.name)}
@@ -45,22 +53,33 @@ const Home_Header = () => {
             <div className="d-flex flex-column flex-lg-row align-items-lg-center gap-2 py-2 py-lg-0">
               <button
                 type="button"
-                className="btn  btn-sm"
+                className="btn btn-sm"
                 onClick={toggleTheme}
+                aria-label={t(SITE_CONTENT.controls.toggleTheme)}
               >
-                {/* {t(SITE_CONTENT.controls.theme)}:{" "} */}
-                {theme === "dark"
-                  ? <MdDarkMode className="icon2"/>
-                  : <MdLightMode className="icon2"/>}
+                {theme === "dark" ? (
+                  <MdDarkMode className="icon2" />
+                ) : (
+                  <MdLightMode className="icon2" />
+                )}
               </button>
-              <select
-                className="form-select form-select-sm"
-                value={language}
-                onChange={(event) => setLanguage(event.target.value)}
+
+              <button
+                type="button"
+                className="btn btn-sm d-flex align-items-center gap-1"
+                onClick={toggleLanguage}
+                aria-label={t(SITE_CONTENT.controls.toggleLanguage)}
+                title={t(SITE_CONTENT.controls.toggleLanguage)}
               >
-                <option value="en">{t(SITE_CONTENT.controls.english)}</option>
-                <option value="am">{t(SITE_CONTENT.controls.amharic)}</option>
-              </select>
+                <MdOutlineLanguage className="icon2" />
+                <span className="small fw-semibold text-uppercase">
+                  {language === "en"
+                    ? t(SITE_CONTENT.languages.en)
+                    : language === "am"
+                      ? t(SITE_CONTENT.languages.am)
+                      : t(SITE_CONTENT.languages.om)}
+                </span>
+              </button>
             </div>
           </Navbar.Collapse>
         </Container>
